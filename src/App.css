@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+:root {
+  --mainColor: #000;
+  --secondaryColor: #fff;
+  --tertiaryColor: whitesmoke;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
+  font-family: 'Source Code Pro', monospace;
+}
+
+body {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  /* background-color: #A7BFE8; */
+  background-image: linear-gradient(120deg,#6190E8 0%,#A7BFE8 100%);
+}
+
+#quote-box {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+
+  margin: 0 auto;
+
+  border-radius: 15px;
+
+  background-color: var(--secondaryColor);
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+
+  justify-content: center;
+  align-items: left;
+
+  padding: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+}
+.button-container {
+  display: flex;
+  
+  
+}
+button {
+  background-color: #A7BFE8;
+  border: none;
+  border-radius: 10px;
   color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  min-width: 30%;
+  width: 100px;
+  
+  opacity: 0.5;
+  transition: 0.5s;
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  border-radius: 10px;
+  color: var(--mainText);
+  opacity: 1;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.title {
+  font-family: "Audiowide", cursive;
+  position: absolute;
+  top: 0;
+  left: 30%;
+
+  color: var(--mainColor);
+  
+  text-shadow: 2px 2px 4px #000000;
+}
+
+a {
+  display: flex;
+  background-color: #A7BFE8;
+  color: white;
+  width: 37px;
+  height: 37px;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+
+  transition: 0.5s;
+  opacity: 0.5;
+  margin-left: 10px;
+}
+
+a:hover {
+  color: var(--mainText);
+  outline: none;
+  opacity: 1;
+}
+
+.quote-wrapper {
+  transition: opacity ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
 }
