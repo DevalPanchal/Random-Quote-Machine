@@ -79,7 +79,7 @@ button {
 
 button:hover {
   border-radius: 10px;
-  color: var(--mainText);
+  color: var(--tertiaryColor);
   opacity: 1;
   outline: none;
 }
@@ -113,7 +113,7 @@ a {
 }
 
 a:hover {
-  color: var(--mainText);
+  color: var(--tertiaryColor);
   outline: none;
   opacity: 1;
 }
