@@ -8,9 +8,6 @@ This project was created using react and the data from the given url was fetched
 ## Demo
 https://codepen.io/devalpanchal2401/pen/poEaRJW
 
-## ScreenShots
-![ScreenShot](/public/images/screenshot.PNG)
-
 ## Challenge
 **User Story #1**: I can see a wrapper element with a corresponding id="quote-box".
 
