@@ -36,7 +36,9 @@ body {
 #quote-box {
   display: flex;
   flex-direction: column;
-  width: 1000px;
+  width: 1200px;
+
+  max-width: 80%;
 
   margin: 0 auto;
 
@@ -52,11 +54,7 @@ body {
   padding: 30px;
 }
 
-@media screen and (max-width: 1200px) {
-  .container {
-    width: 95%;
-  }
-}
+
 .button-container {
   display: flex;
   
@@ -131,4 +129,10 @@ a:hover {
 
 .fade-in {
   opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  #quote-box {
+    width: 95%;
+  }
 }
