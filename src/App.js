@@ -76,8 +76,12 @@ export default class App extends Component {
               <i id="twitter-icon" class="fab fa-twitter"></i>
             </a>
           </div>
-
+        
         </div>
+        <div className="author-container">
+          <p>Project Made by Deval Panchal</p>
+        </div>
+        
       </div>
     );
   }
