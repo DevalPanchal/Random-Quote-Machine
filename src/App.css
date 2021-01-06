@@ -3,8 +3,8 @@
   --secondaryColor: #fff;
   --tertiaryColor: whitesmoke;
 
-  --background: linear-gradient(120deg,#6190E8 0%,#A7BFE8 100%);
-  --buttonBackground: #A7BFE8;
+  --background: rgb(52, 86, 139);
+  --buttonBackground: rgb(52, 86, 139);
 }
 
 h1 {
@@ -12,7 +12,6 @@ h1 {
 }
 
 h3 {
-  font-family: 'Lobster', cursive;
   font-size: 20px;
 }
 
@@ -24,13 +23,17 @@ body {
   display: flex;
   flex-direction: column;
 
+  text-decoration: none;
+
   justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
   height: 100vh;
+
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   /* background-color: #A7BFE8; */
-  background-image: var(--background);
+  background-color: var(--background);
 }
 
 #quote-box {
@@ -52,6 +55,11 @@ body {
   align-items: left;
 
   padding: 30px;
+}
+
+#text {
+  height: 42px;
+  margin: 3px;
 }
 
 
@@ -79,6 +87,7 @@ button {
 }
 
 button:hover {
+  cursor: pointer;
   border-radius: 10px;
   color: var(--tertiaryColor);
   opacity: 1;
@@ -87,9 +96,8 @@ button:hover {
 
 
 .title {
-  font-family: "Audiowide", cursive;
-  
-  margin-left: 10%;
+  display: flex;
+  justify-content: center;
   margin-bottom: 10%;
 
   color: var(--mainColor);

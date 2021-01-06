@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 
-const DURATION = 240;
 
+const DURATION = 240;
 export default class App extends Component {
   constructor() {
     super();
@@ -23,14 +23,22 @@ export default class App extends Component {
     this.getQuote();
   }
 
+  changeColour() {
+    let randomColour = colours[Math.floor(Math.random() * colours.length)];
+    document.body.style.transition = 0.24 + "s";
+    document.body.style.backgroundColor = randomColour;
+    document.getElementById('new-quote').style.backgroundColor = randomColour;
+    document.getElementById('tweet-quote').style.backgroundColor = randomColour;
+  }
+
   getQuote() {
-    let url =
-      "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
+    let url ="https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
 
     const timeout = setTimeout(() => {
       axios.get(url).then((response) => {
         let data = response.data["quotes"];
         let quoteNum = Math.floor(Math.random() * data.length);
+
         let randomQuote = data[quoteNum];
         this.setState({
           quote: randomQuote["quote"],
@@ -51,6 +59,7 @@ export default class App extends Component {
 
   handleClick() {
     this.getQuote();
+    this.changeColour();
   }
 
   render() {
@@ -69,20 +78,33 @@ export default class App extends Component {
           </div>
 
           <div className="button-container">
-            <button id="new-quote" onClick={this.handleClick}>
-              New quote
-            </button>
+            <button id="new-quote" onClick={this.handleClick}>New quote</button>
             <a id="tweet-quote" target="blank" href="twitter.com/intent/tweet">
               <i id="twitter-icon" class="fab fa-twitter"></i>
             </a>
           </div>
-        
+
         </div>
         <div className="author-container">
           <p>Project Made by Deval Panchal</p>
         </div>
-        
+
       </div>
     );
   }
 }
+
+const colours = [
+  '#16a085',
+  '#27ae60',
+  '#2c3e50',
+  '#f39c12',
+  '#e74c3c',
+  '#9b59b6',
+  '#FB6964',
+  '#342224',
+  '#472E32',
+  '#BDBB99',
+  '#77B1A9',
+  '#73A857'
+];
